@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74107EF01EC5CC500033D8D2 /* 23_Generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74107EEF1EC5CC500033D8D2 /* 23_Generics.swift */; };
 		7473FF181EC0759A0064BE7F /* 6_Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7473FF171EC0759A0064BE7F /* 6_Functions.swift */; };
 		7473FF1A1EC097DC0064BE7F /* 7_Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7473FF191EC097DC0064BE7F /* 7_Closure.swift */; };
 		7475A4C21EBC5CEE00AAECEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7475A4C11EBC5CEE00AAECEC /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74107EEF1EC5CC500033D8D2 /* 23_Generics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 23_Generics.swift; sourceTree = "<group>"; };
 		7473FF171EC0759A0064BE7F /* 6_Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 6_Functions.swift; sourceTree = "<group>"; };
 		7473FF191EC097DC0064BE7F /* 7_Closure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 7_Closure.swift; sourceTree = "<group>"; };
 		7475A4BE1EBC5CEE00AAECEC /* Swift3.1_Study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift3.1_Study.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +120,7 @@
 				7475A4F41EBCA23700AAECEC /* 5_ControlFlow.swift */,
 				7473FF171EC0759A0064BE7F /* 6_Functions.swift */,
 				7473FF191EC097DC0064BE7F /* 7_Closure.swift */,
+				74107EEF1EC5CC500033D8D2 /* 23_Generics.swift */,
 				7475A4C51EBC5CEE00AAECEC /* Assets.xcassets */,
 				7475A4C71EBC5CEE00AAECEC /* Main.storyboard */,
 				7475A4CA1EBC5CEE00AAECEC /* Info.plist */,
@@ -281,6 +284,7 @@
 			files = (
 				7473FF1A1EC097DC0064BE7F /* 7_Closure.swift in Sources */,
 				7475A4F51EBCA23700AAECEC /* 5_ControlFlow.swift in Sources */,
+				74107EF01EC5CC500033D8D2 /* 23_Generics.swift in Sources */,
 				7475A4C41EBC5CEE00AAECEC /* ViewController.swift in Sources */,
 				7473FF181EC0759A0064BE7F /* 6_Functions.swift in Sources */,
 				7475A4C21EBC5CEE00AAECEC /* AppDelegate.swift in Sources */,
