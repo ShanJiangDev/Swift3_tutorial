@@ -29,7 +29,9 @@ class ViewController: NSViewController {
         //Closures.traillingClosure()
         //Closures.capturingValues()
         //Closures.ClosuresAreReferenceTypes()
-        Closures.escapingClosures()
+        //Closures.escapingClosures()
+        //Generics.General()
+        Generics.Type()
 
         
     }
