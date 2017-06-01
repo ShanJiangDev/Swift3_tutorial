@@ -61,6 +61,7 @@
 		7475A4F01EBC71E900AAECEC /* 2_BasicOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 2_BasicOperators.swift; sourceTree = "<group>"; };
 		7475A4F21EBC71F600AAECEC /* 1_Basic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 1_Basic.swift; sourceTree = "<group>"; };
 		7475A4F41EBCA23700AAECEC /* 5_ControlFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 5_ControlFlow.swift; sourceTree = "<group>"; };
+		74F0690D1EE0429100538DD7 /* escapingClosures.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = escapingClosures.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +121,7 @@
 				7475A4F41EBCA23700AAECEC /* 5_ControlFlow.swift */,
 				7473FF171EC0759A0064BE7F /* 6_Functions.swift */,
 				7473FF191EC097DC0064BE7F /* 7_Closure.swift */,
+				74F0690D1EE0429100538DD7 /* escapingClosures.playground */,
 				74107EEF1EC5CC500033D8D2 /* 23_Generics.swift */,
 				7475A4C51EBC5CEE00AAECEC /* Assets.xcassets */,
 				7475A4C71EBC5CEE00AAECEC /* Main.storyboard */,
@@ -434,12 +436,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = VBFU4GNPDX;
 				INFOPLIST_FILE = Swift3.1_Study/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shanJiang.Swift3-1-Study";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -448,12 +452,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = VBFU4GNPDX;
 				INFOPLIST_FILE = Swift3.1_Study/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shanJiang.Swift3-1-Study";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

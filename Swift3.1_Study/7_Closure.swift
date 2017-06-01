@@ -219,50 +219,107 @@ class Closures {
         
         // The function returns after it starts the operation, but the closure isn't called untill the operation is completed -> the closure need to escape, to be called later
         
-        var completionHandlers: [() -> Void] = []
-        func someFunctionWithEscapingClosure(completionHandler: @escaping () -> Void) {
-            completionHandlers.append(completionHandler)
-        }
+//        var completionHandlers: [() -> Void] = []
+//        func someFunctionWithEscapingClosure(completionHandler: @escaping () -> Void) {
+//            completionHandlers.append(completionHandler)
+//        }
         
         //----------------------------------------------------------------//
-        
-        func someFunctionWithNonescapingClosure(closure:() -> Void){
+       
+/*
+         // Example check escapingClosures.playground
+         //: Playground - noun: a place where people can play
+         
+         import UIKit
+         
+         var str = "Hello, playground"
+         
+         var completionHandlers: [() -> Void] = []
+         
+         func someFunctionWithEscapingClosure(completionHandler: @escaping () -> Void) {
+            completionHandlers.append(completionHandler)
+         }
+         
+         func someFunctionWithNonescapingClosure(closure:() -> Void){
             closure()
-        }
-        
-        class SomeClass{
+         }
+         
+         class SomeClass{
             var x = 10
+         
             func doSomething(){
-                
+         
                 someFunctionWithEscapingClosure {
                     self.x = 100
                 }
-                
+         
                 someFunctionWithNonescapingClosure {
                     x = 200
                 }
             }
-            
-            var completionHandlers: [() -> Void] = []
-            func someFunctionWithEscapingClosure(completionHandler: @escaping () -> Void) {
-                completionHandlers.append(completionHandler)
-            }
-            func someFunctionWithNonescapingClosure(closure:() -> Void){
-                closure()
-            }
-            
+         
+         
+         }
+         
+         let instance = SomeClass()
+         instance.doSomething()
+         print(" with no escaping closure: \(instance.x)")
+         
+         completionHandlers.first?()
+         print(" with no escaping closure: \(instance.x)")
+
+*/
+    }
+    
+    class func autoClosure(){
+        // Auto closure lets you delay evaluation, because the code inside isn't run until you call the closure.Delaying evaluation is useful for code that has side effects or is computationally expensive, because it lets you control when that code is evaluated.
+        
+        //-----------Use a function with no parameters for returnning a string-----------//
+        var customersInLine = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
+        print(customersInLine.count)
+        
+        let customerProvider = { customersInLine.remove(at: 0)}
+        print(customersInLine.count)
+        
+        //customersInLine.remove(at: 0) run now after call the next line
+        print("Now serving \(customerProvider())!")
+        print(customersInLine.count)
+        
+        //-----------Use a closure as an arguent to a function returnning a string-----------//
+        
+        func serve(customer customerProvider2: () -> String){
+            print("Now serving \(customerProvider2())!")
+        }
+        serve(customer: {customersInLine.remove(at: 0)})
+        print(customersInLine.count)
+        
+        //-----------Taking an autoclosure by marking its parameters type-----------//
+        
+
+        func serve2(customer customerProvider3: @autoclosure () -> String){
+            print("Now serving \(customerProvider3())")
+        }
+        // Now you can call the function as if it took a String argument instead of a closure. The argument is automatically converted to a closure. Because the customerProvider3 parameter's type is marked with the @autoclosure attribute
+        serve2(customer: customersInLine.remove(at: 0))
+        print(customersInLine.count)
+
+        //-----------@autoclosure & @escaping-----------//
+        var customerProviders : [() -> String] = []
+        
+        func collectCustomerProviers(_ customerProvider4: @autoclosure @escaping () -> String){
+            customerProviders.append(customerProvider4)
         }
         
-        let instance = SomeClass()
-        instance.doSomething()
-        print(instance.x)
+        collectCustomerProviers(customersInLine.remove(at: 0))
+        collectCustomerProviers(customersInLine.remove(at: 0))
         
-        completionHandlers.first?()
-        print(instance.x)
+        // now both completions are stored inside customerProviders
+        print("Collected \(customerProviders.count) closures.")
         
-        
-        
-        
+        for customerProvider in customerProviders{
+            print("Now serving \(customerProvider())!")
+            print(customersInLine.count)
+        }
     }
 }
 
