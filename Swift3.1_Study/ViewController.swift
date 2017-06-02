@@ -30,7 +30,11 @@ class ViewController: NSViewController {
         //Closures.capturingValues()
         //Closures.ClosuresAreReferenceTypes()
         //Closures.escapingClosures()
-        Closures.autoClosure()
+        //Closures.autoClosure()
+        //Enumeration.Syntax()
+        //Enumeration.EnumWithSwitch()
+        //Enumeration.AssociatedValues()
+        Enumeration.RawValues()
         //Generics.General()
         //Generics.Type()
 
