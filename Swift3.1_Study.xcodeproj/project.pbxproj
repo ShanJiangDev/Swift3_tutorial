@@ -22,6 +22,7 @@
 		7475A4F31EBC71F600AAECEC /* 1_Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7475A4F21EBC71F600AAECEC /* 1_Basic.swift */; };
 		7475A4F51EBCA23700AAECEC /* 5_ControlFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7475A4F41EBCA23700AAECEC /* 5_ControlFlow.swift */; };
 		74F0690F1EE04A2900538DD7 /* 8_Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F0690E1EE04A2900538DD7 /* 8_Enumerations.swift */; };
+		74F069111EE14FF600538DD7 /* 9_ClassAndStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F069101EE14FF600538DD7 /* 9_ClassAndStructure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		7475A4F41EBCA23700AAECEC /* 5_ControlFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 5_ControlFlow.swift; sourceTree = "<group>"; };
 		74F0690D1EE0429100538DD7 /* escapingClosures.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = escapingClosures.playground; sourceTree = "<group>"; };
 		74F0690E1EE04A2900538DD7 /* 8_Enumerations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 8_Enumerations.swift; sourceTree = "<group>"; };
+		74F069101EE14FF600538DD7 /* 9_ClassAndStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 9_ClassAndStructure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				7473FF171EC0759A0064BE7F /* 6_Functions.swift */,
 				7473FF191EC097DC0064BE7F /* 7_Closure.swift */,
 				74F0690E1EE04A2900538DD7 /* 8_Enumerations.swift */,
+				74F069101EE14FF600538DD7 /* 9_ClassAndStructure.swift */,
 				74F0690D1EE0429100538DD7 /* escapingClosures.playground */,
 				74107EEF1EC5CC500033D8D2 /* 23_Generics.swift */,
 				7475A4C51EBC5CEE00AAECEC /* Assets.xcassets */,
@@ -287,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74F069111EE14FF600538DD7 /* 9_ClassAndStructure.swift in Sources */,
 				7473FF1A1EC097DC0064BE7F /* 7_Closure.swift in Sources */,
 				7475A4F51EBCA23700AAECEC /* 5_ControlFlow.swift in Sources */,
 				74107EF01EC5CC500033D8D2 /* 23_Generics.swift in Sources */,

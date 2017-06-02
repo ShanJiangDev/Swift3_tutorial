@@ -34,7 +34,8 @@ class ViewController: NSViewController {
         //Enumeration.Syntax()
         //Enumeration.EnumWithSwitch()
         //Enumeration.AssociatedValues()
-        Enumeration.RawValues()
+        //Enumeration.RawValues()
+        ClassAndStructures.CompareClassStructure()
         //Generics.General()
         //Generics.Type()
 
