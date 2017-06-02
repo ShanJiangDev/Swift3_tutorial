@@ -23,6 +23,7 @@
 		7475A4F51EBCA23700AAECEC /* 5_ControlFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7475A4F41EBCA23700AAECEC /* 5_ControlFlow.swift */; };
 		74F0690F1EE04A2900538DD7 /* 8_Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F0690E1EE04A2900538DD7 /* 8_Enumerations.swift */; };
 		74F069111EE14FF600538DD7 /* 9_ClassAndStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F069101EE14FF600538DD7 /* 9_ClassAndStructure.swift */; };
+		74F069141EE17A4A00538DD7 /* 10_Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F069131EE17A4A00538DD7 /* 10_Properties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		74F0690D1EE0429100538DD7 /* escapingClosures.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = escapingClosures.playground; sourceTree = "<group>"; };
 		74F0690E1EE04A2900538DD7 /* 8_Enumerations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 8_Enumerations.swift; sourceTree = "<group>"; };
 		74F069101EE14FF600538DD7 /* 9_ClassAndStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 9_ClassAndStructure.swift; sourceTree = "<group>"; };
+		74F069131EE17A4A00538DD7 /* 10_Properties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 10_Properties.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				7473FF191EC097DC0064BE7F /* 7_Closure.swift */,
 				74F0690E1EE04A2900538DD7 /* 8_Enumerations.swift */,
 				74F069101EE14FF600538DD7 /* 9_ClassAndStructure.swift */,
+				74F069131EE17A4A00538DD7 /* 10_Properties.swift */,
 				74F0690D1EE0429100538DD7 /* escapingClosures.playground */,
 				74107EEF1EC5CC500033D8D2 /* 23_Generics.swift */,
 				7475A4C51EBC5CEE00AAECEC /* Assets.xcassets */,
@@ -300,6 +303,7 @@
 				7475A4F31EBC71F600AAECEC /* 1_Basic.swift in Sources */,
 				7475A4F11EBC71E900AAECEC /* 2_BasicOperators.swift in Sources */,
 				7475A4EF1EBC71C200AAECEC /* 3_StringAndChars.swift in Sources */,
+				74F069141EE17A4A00538DD7 /* 10_Properties.swift in Sources */,
 				7475A4ED1EBC70A700AAECEC /* 4_CollectionType.swift in Sources */,
 				74F0690F1EE04A2900538DD7 /* 8_Enumerations.swift in Sources */,
 			);
