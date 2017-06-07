@@ -36,7 +36,8 @@ class ViewController: NSViewController {
         //Enumeration.AssociatedValues()
         //Enumeration.RawValues()
         //ClassAndStructures.CompareClassStructure()
-        Properties.StoredProperties()
+        //Properties.StoredProperties()
+        Method.instanceMethod()
         //Generics.General()
         //Generics.Type()
 
