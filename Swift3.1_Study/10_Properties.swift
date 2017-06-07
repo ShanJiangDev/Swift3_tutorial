@@ -180,9 +180,179 @@ class Properties{
         
         /*-----------------7. Read-only Computed Properties -----------------*/
         print("/*-----------------7. Read-only Computed Properties -----------------*/ \n")
+        
+        // Definitation: A computed property with a getter but no setter, it always returns a value, and can be accessed through dot syntax, but cannot be set to a different value.
+        
+        struct Cuboid{
+            var width = 0.0, height = 0.0, depth = 0.0
+            var valume: Double {
+                return width * height * depth
+            }
+        }
+        
+        let fourByFiveByTwo = Cuboid(width: 0.0, height: 5.0, depth: 2.0)
+        print("the volume of fourByFiveByTwo is \(fourByFiveByTwo.valume)")
 
 
-
+        /*-----------------8. Property Observers -----------------*/
+        print("/*----------------- 8. Property Observers -----------------*/ \n")
+        
+        // Definitation: They observe and respond to changes in a property's value. Property Observers are called every time a property's value is set, even if the new value is the same as the property's current value.
+        
+        // Where to use: Property observers can be added to any stored properties you define(included to any inherited property whether stored or computed by overriding the property within a subclass),
+        //  expect for lazy stored properties.
+        
+        // Do not need to define property observers for nonoverridden computed properties, because you can observe and respond to changes to their value in the computed property's setter.
+        
+        // You have the option to define either or both of these observers on a property:
+        // 1. willSet: is called just before the value is stored.
+        // 2. didSet:  is called immediately after the new value is stored.
+        
+        // How to use willSet/didSet:
+        // Method 1: if you implement a willSet observer, its passed the new property value as a constant parameter. You can specify a name for this parameter as part of your willSet implementation. 
+        // Method 2: if you dont write the parameter name and parenthese within your implementation, the parameter is made available with a default parameter name of "newValue -- willSet, oldValue -- didSet"
+        
+        // Using for superclass - subclass: These two observers of superclass properties are called when a property is set in a subclass initializer, after the superclass initializer has been called. They are not called while a class is setting its own properties, before the superclass initializer has been called.
+        
+        class StepCounter{
+            var totalSteps: Int = 0{
+                willSet(newTotalSteps){
+                    print("About to set totalSteps to \(newTotalSteps)")
+                }
+                didSet{
+                    if totalSteps > oldValue {
+                        print("Added \(totalSteps - oldValue) steps")
+                    }
+                }
+            }
+        }
+        
+        let stepCounter = StepCounter()
+        
+        stepCounter.totalSteps = 200
+        
+        stepCounter.totalSteps = 100
+        
+        stepCounter.totalSteps = 100 // willSet and didSet are called everytime whenever the property is assigned   
+                                     // a new value or not.
+        
+        stepCounter.totalSteps = 360
+        
+        stepCounter.totalSteps = 896
+        
+       // inout property always come with willSet and didSet
+        
+        
+        /*----------------- 9. Global and Local Variables -----------------*/
+        print("/*----------------- 9. Global and Local Variables -----------------*/ \n")
+        
+        
+        // Both Global and local variable can
+        // * has the capabilities for computing and observing
+        // * can be stored variable -- observing
+        //      provide storage for a value of a certain type and allow that value to be set and retrieved.
+        // * can be computed variable -- computing
+        //      it can calculate their value, rather than storing it, and they are written in the same way as computed properties.
+        
+        //Global Variable
+        // * Defined outside of any function, method, closure, or type context.
+        // * Global constants and variables are always computed lazily, in a simmilar manner to Lazy Stored Properties. But they do not need to marked with "lazy" modifier.
+        
+        //Local Variable
+        // * Defined within a function, method, or closure context,
+        // * Never computed lazily
+        
+        /*----------------- 10. Type Properties -----------------*/
+        print("/*----------------- 10. Type Properties -----------------*/ \n")
+        
+        
+        // Instance properties definitation: properties that belong to an instance of a particular type. Every time you create a new instance of that type, it has its own set of property values, separate from any other instance.
+        
+        // Type properties Definitation: These properties belong to the type itself. not to any one instance of that type. There will only ever be one copy of these properties, no matter how many instance of that type you create.
+        
+        // Type properties useage: Useful for defining values that are universal to all instances of a particular type, such as a constant property that all instances can use, or a variable property that stores a value that is global to all instances of that type.
+        
+        // Type properties:
+        // 1. Stored type properties: var or let
+        //    * Must always give stored type properties a defaultvalue (because the type itself does not have an initializer that can assign a value to a stored type property at initialization time)
+        //    * Lazily initialized on their first access. They are guaranteed to be initialized only once, even when accessed by multiple thread simultaneously, and they do not need to be marked with the "lazy" modifier.
+        
+        // 2. Computed type properties: var
+        //--------------------------------------------
+        // 3. Stored instance properties: var or let
+        
+        // 4. Computed instance properties: var
+        
+        // Syntax: type properties are written as part of the type's definition. Define type properties with the "static" keyword. For computed type properties for class types, you can use the "class" keyword instead to allow subclasses to override the superclass's implementation.
+        
+        
+        struct SomeStructure{
+            static var storedTypeProperty = "Some Value."
+            static var computedTypeProperty: Int {
+                return 1
+            }
+        }
+        
+        enum SomeEnumeration {
+            static var storedTypeProperty = "Some value."
+            static var computedTypeProperty: Int {
+                return 6
+            }
+        }
+        
+        class SomeClass {
+            static var storedTypeProperty = "Some Value."
+            static var computedTypeProperty: Int {
+                return 27
+            }
+            class var overrideableComputedTypeProperty: Int {
+                return 107
+            }
+        }
+        
+        /*----------------- 11. Querying and Setting Type Properties -----------------*/
+        print("/*----------------- 11. Querying and Setting Type Properties -----------------*/ \n")
+        
+        // Type properties are queried and set on the type, not on an instance of that type.
+        
+        print(SomeStructure.storedTypeProperty)
+        
+        SomeStructure.storedTypeProperty = "Another value."
+        
+        print(SomeStructure.storedTypeProperty)
+        
+        print(SomeEnumeration.computedTypeProperty)
+        
+        print(SomeClass.computedTypeProperty)
+        
+        struct AudioChannel {
+            static let thresholdLevel = 10                  // -- Type property
+            static var maxInputLevelForAllChannels = 0      // -- Type property
+            var currentLevel: Int = 0{ // stored instance   // -- Instance property
+                didSet {
+                    if currentLevel > AudioChannel.thresholdLevel {
+                        // cap the new audio level to the threshold level
+                        currentLevel = AudioChannel.thresholdLevel
+                        // here currentLevel is set to another value, however "didSet" will not be called.
+                    }
+                    if currentLevel > AudioChannel.maxInputLevelForAllChannels {
+                        AudioChannel.maxInputLevelForAllChannels = currentLevel
+                    }
+                }
+            }
+        }
+        
+        var leftChannel = AudioChannel()
+        var rightChannel = AudioChannel()
+        
+        print(AudioChannel.maxInputLevelForAllChannels)
+        leftChannel.currentLevel = 7
+        print(leftChannel.currentLevel)
+        print(AudioChannel.maxInputLevelForAllChannels)
+        
+        leftChannel.currentLevel = 11
+        print(leftChannel.currentLevel)
+        print(AudioChannel.maxInputLevelForAllChannels)
     }
 }
 
