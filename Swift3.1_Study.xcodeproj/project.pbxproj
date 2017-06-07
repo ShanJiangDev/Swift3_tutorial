@@ -24,6 +24,7 @@
 		74F0690F1EE04A2900538DD7 /* 8_Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F0690E1EE04A2900538DD7 /* 8_Enumerations.swift */; };
 		74F069111EE14FF600538DD7 /* 9_ClassAndStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F069101EE14FF600538DD7 /* 9_ClassAndStructure.swift */; };
 		74F069141EE17A4A00538DD7 /* 10_Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F069131EE17A4A00538DD7 /* 10_Properties.swift */; };
+		74F0691F1EE805CE00538DD7 /* 11_Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F0691E1EE805CE00538DD7 /* 11_Method.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		74F0690E1EE04A2900538DD7 /* 8_Enumerations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 8_Enumerations.swift; sourceTree = "<group>"; };
 		74F069101EE14FF600538DD7 /* 9_ClassAndStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 9_ClassAndStructure.swift; sourceTree = "<group>"; };
 		74F069131EE17A4A00538DD7 /* 10_Properties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 10_Properties.swift; sourceTree = "<group>"; };
+		74F0691E1EE805CE00538DD7 /* 11_Method.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 11_Method.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				74F0690E1EE04A2900538DD7 /* 8_Enumerations.swift */,
 				74F069101EE14FF600538DD7 /* 9_ClassAndStructure.swift */,
 				74F069131EE17A4A00538DD7 /* 10_Properties.swift */,
+				74F0691E1EE805CE00538DD7 /* 11_Method.swift */,
 				74F0690D1EE0429100538DD7 /* escapingClosures.playground */,
 				74107EEF1EC5CC500033D8D2 /* 23_Generics.swift */,
 				7475A4C51EBC5CEE00AAECEC /* Assets.xcassets */,
@@ -297,6 +300,7 @@
 				7473FF1A1EC097DC0064BE7F /* 7_Closure.swift in Sources */,
 				7475A4F51EBCA23700AAECEC /* 5_ControlFlow.swift in Sources */,
 				74107EF01EC5CC500033D8D2 /* 23_Generics.swift in Sources */,
+				74F0691F1EE805CE00538DD7 /* 11_Method.swift in Sources */,
 				7475A4C41EBC5CEE00AAECEC /* ViewController.swift in Sources */,
 				7473FF181EC0759A0064BE7F /* 6_Functions.swift in Sources */,
 				7475A4C21EBC5CEE00AAECEC /* AppDelegate.swift in Sources */,
