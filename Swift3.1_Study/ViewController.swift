@@ -39,7 +39,8 @@ class ViewController: NSViewController {
         //Properties.StoredProperties()
         //Method.instanceMethod()
         //Subscripts.subscripte()
-        Inheritance.inheritance()
+        //Inheritance.inheritance()
+        Initialization.initialization()
         //Generics.General()
         //Generics.Type()
 
