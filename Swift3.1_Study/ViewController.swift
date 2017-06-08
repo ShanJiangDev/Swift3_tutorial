@@ -38,7 +38,8 @@ class ViewController: NSViewController {
         //ClassAndStructures.CompareClassStructure()
         //Properties.StoredProperties()
         //Method.instanceMethod()
-        Subscripts.subscripte()
+        //Subscripts.subscripte()
+        Inheritance.inheritance()
         //Generics.General()
         //Generics.Type()
 
